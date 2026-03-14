@@ -18,17 +18,17 @@
             --glass: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.1);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: 'Noto Sans TC', 'Space Grotesk', sans-serif;
             background: var(--primary);
@@ -36,7 +36,7 @@
             line-height: 1.7;
             overflow-x: hidden;
         }
-        
+
         /* Animated Background */
         .bg-animation {
             position: fixed;
@@ -47,7 +47,7 @@
             z-index: -1;
             overflow: hidden;
         }
-        
+
         .bg-animation::before {
             content: '';
             position: absolute;
@@ -55,19 +55,19 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: 
+            background:
                 radial-gradient(ellipse at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
                 radial-gradient(ellipse at 80% 80%, rgba(15, 34, 64, 0.5) 0%, transparent 50%),
                 radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
             animation: bgMove 20s ease-in-out infinite;
         }
-        
+
         @keyframes bgMove {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
             33% { transform: translate(2%, 2%) rotate(1deg); }
             66% { transform: translate(-1%, 1%) rotate(-1deg); }
         }
-        
+
         /* Floating Particles */
         .particles {
             position: fixed;
@@ -78,7 +78,7 @@
             z-index: -1;
             pointer-events: none;
         }
-        
+
         .particle {
             position: absolute;
             width: 4px;
@@ -88,18 +88,18 @@
             opacity: 0.3;
             animation: float 15s infinite;
         }
-        
+
         .particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
         .particle:nth-child(2) { left: 20%; top: 80%; animation-delay: 2s; }
         .particle:nth-child(3) { left: 60%; top: 10%; animation-delay: 4s; }
         .particle:nth-child(4) { left: 80%; top: 60%; animation-delay: 6s; }
         .particle:nth-child(5) { left: 40%; top: 40%; animation-delay: 8s; }
-        
+
         @keyframes float {
             0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
             50% { transform: translateY(-100px) scale(1.5); opacity: 0.6; }
         }
-        
+
         /* Navigation */
         nav {
             display: flex;
@@ -116,24 +116,24 @@
             border-bottom: 1px solid var(--glass-border);
             transition: all 0.3s;
         }
-        
+
         nav.scrolled {
             padding: 1rem 5%;
             background: rgba(10, 22, 40, 0.95);
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        
+
         .logo img {
             height: 45px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
         }
-        
+
         .logo-text {
             font-size: 1.4rem;
             font-weight: 700;
@@ -143,13 +143,13 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
         }
-        
+
         .nav-links a {
             color: var(--text-gray);
             text-decoration: none;
@@ -158,11 +158,11 @@
             transition: all 0.3s;
             position: relative;
         }
-        
+
         .nav-links a:hover {
             color: var(--accent);
         }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -174,11 +174,11 @@
             transition: width 0.3s;
             box-shadow: 0 0 10px var(--accent-glow);
         }
-        
+
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -188,14 +188,14 @@
             padding: 120px 5% 80px;
             position: relative;
         }
-        
+
         .hero-content {
             text-align: center;
             max-width: 900px;
             position: relative;
             z-index: 2;
         }
-        
+
         .hero-badge {
             display: inline-block;
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
@@ -209,12 +209,12 @@
             font-weight: 600;
             animation: fadeInDown 0.8s ease;
         }
-        
+
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
+
         .hero h1 {
             font-size: clamp(2.8rem, 7vw, 5rem);
             font-weight: 700;
@@ -222,7 +222,7 @@
             line-height: 1.15;
             animation: fadeInUp 0.8s ease 0.2s both;
         }
-        
+
         .hero h1 .highlight {
             background: linear-gradient(135deg, var(--accent) 0%, #f5d97a 50%, var(--accent) 100%);
             -webkit-background-clip: text;
@@ -231,16 +231,16 @@
             background-size: 200% auto;
             animation: shimmer 3s linear infinite;
         }
-        
+
         @keyframes shimmer {
             to { background-position: 200% center; }
         }
-        
+
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
+
         .hero-subtitle {
             font-size: 1.3rem;
             color: var(--text-gray);
@@ -250,7 +250,7 @@
             margin-right: auto;
             animation: fadeInUp 0.8s ease 0.4s both;
         }
-        
+
         .hero-cta {
             display: flex;
             gap: 1.5rem;
@@ -258,7 +258,7 @@
             justify-content: center;
             animation: fadeInUp 0.8s ease 0.6s both;
         }
-        
+
         .btn {
             padding: 1rem 2.5rem;
             border-radius: 8px;
@@ -271,19 +271,19 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, var(--accent) 0%, #c9a227 100%);
             color: var(--primary);
             border: none;
             box-shadow: 0 4px 30px rgba(212, 175, 55, 0.4);
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 40px rgba(212, 175, 55, 0.5);
         }
-        
+
         .btn-primary::before {
             content: '';
             position: absolute;
@@ -294,35 +294,35 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
             transition: left 0.5s;
         }
-        
+
         .btn-primary:hover::before {
             left: 100%;
         }
-        
+
         .btn-outline {
             background: var(--glass);
             color: var(--text-light);
             border: 1px solid var(--glass-border);
             backdrop-filter: blur(10px);
         }
-        
+
         .btn-outline:hover {
             border-color: var(--accent);
             color: var(--accent);
             background: rgba(212, 175, 55, 0.1);
         }
-        
+
         /* Section Styles */
         section {
             padding: 100px 5%;
             position: relative;
         }
-        
+
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
         }
-        
+
         .section-label {
             color: var(--accent);
             font-size: 0.85rem;
@@ -331,12 +331,12 @@
             display: block;
             font-weight: 600;
         }
-        
+
         .section-title {
             font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 700;
         }
-        
+
         /* Glass Card */
         .glass-card {
             background: var(--glass);
@@ -346,18 +346,18 @@
             backdrop-filter: blur(20px);
             transition: all 0.4s;
         }
-        
+
         .glass-card:hover {
             transform: translateY(-10px);
             border-color: rgba(212, 175, 55, 0.3);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
-        
+
         /* Strategy Section */
         .strategy {
             background: linear-gradient(180deg, transparent 0%, rgba(15, 34, 64, 0.5) 100%);
         }
-        
+
         .strategy-image {
             max-width: 1100px;
             margin: 0 auto 4rem;
@@ -366,12 +366,12 @@
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
             border: 1px solid var(--glass-border);
         }
-        
+
         .strategy-image img {
             width: 100%;
             display: block;
         }
-        
+
         .strategy-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -379,7 +379,7 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .strategy-card {
             background: var(--glass);
             border: 1px solid var(--glass-border);
@@ -389,7 +389,7 @@
             overflow: hidden;
             transition: all 0.4s;
         }
-        
+
         .strategy-card::before {
             content: '';
             position: absolute;
@@ -402,16 +402,16 @@
             transform-origin: left;
             transition: transform 0.4s;
         }
-        
+
         .strategy-card:hover {
             transform: translateY(-8px);
             border-color: rgba(212, 175, 55, 0.3);
         }
-        
+
         .strategy-card:hover::before {
             transform: scaleX(1);
         }
-        
+
         .strategy-number {
             font-size: 4rem;
             font-weight: 700;
@@ -421,7 +421,7 @@
             right: 20px;
             line-height: 1;
         }
-        
+
         .strategy-icon {
             width: 60px;
             height: 60px;
@@ -433,18 +433,18 @@
             font-size: 1.6rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .strategy-card h3 {
             font-size: 1.25rem;
             margin-bottom: 0.8rem;
             color: var(--text-light);
         }
-        
+
         .strategy-card p {
             color: var(--text-gray);
             font-size: 0.95rem;
         }
-        
+
         /* Services Section */
         .services-grid {
             display: grid;
@@ -453,7 +453,7 @@
             max-width: 1300px;
             margin: 0 auto;
         }
-        
+
         .service-card {
             background: var(--glass);
             border: 1px solid var(--glass-border);
@@ -463,7 +463,7 @@
             transition: all 0.4s;
             position: relative;
         }
-        
+
         .service-card::after {
             content: '';
             position: absolute;
@@ -476,17 +476,17 @@
             border-radius: 2px;
             transition: width 0.3s;
         }
-        
+
         .service-card:hover {
             transform: translateY(-12px);
             border-color: rgba(212, 175, 55, 0.4);
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
         }
-        
+
         .service-card:hover::after {
             width: 100px;
         }
-        
+
         .service-icon {
             width: 80px;
             height: 80px;
@@ -499,22 +499,22 @@
             font-size: 2rem;
             box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
         }
-        
+
         .service-card h3 {
             font-size: 1.2rem;
             margin-bottom: 0.8rem;
         }
-        
+
         .service-card p {
             color: var(--text-gray);
             font-size: 0.9rem;
         }
-        
+
         /* Team Section */
         .team {
             background: linear-gradient(180deg, rgba(15, 34, 64, 0.5) 0%, transparent 100%);
         }
-        
+
         .team-image {
             max-width: 1200px;
             margin: 0 auto;
@@ -523,22 +523,22 @@
             box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
             border: 1px solid var(--glass-border);
         }
-        
+
         .team-image img {
             width: 100%;
             display: block;
             transition: transform 0.5s;
         }
-        
+
         .team-image:hover img {
             transform: scale(1.02);
         }
-        
+
         /* Risk Section */
         .risk-section {
             background: var(--secondary);
         }
-        
+
         .risk-image {
             max-width: 1000px;
             margin: 0 auto 4rem;
@@ -547,12 +547,12 @@
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
             border: 1px solid var(--glass-border);
         }
-        
+
         .risk-image img {
             width: 100%;
             display: block;
         }
-        
+
         .risk-table {
             max-width: 900px;
             margin: 0 auto;
@@ -561,7 +561,7 @@
             overflow: hidden;
             border: 1px solid var(--glass-border);
         }
-        
+
         .risk-header {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
@@ -571,7 +571,7 @@
             text-align: center;
             border-bottom: 1px solid var(--glass-border);
         }
-        
+
         .risk-row {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
@@ -580,15 +580,15 @@
             text-align: center;
             transition: background 0.3s;
         }
-        
+
         .risk-row:last-child {
             border-bottom: none;
         }
-        
+
         .risk-row:hover {
             background: rgba(212, 175, 55, 0.05);
         }
-        
+
         .risk-group {
             font-weight: 500;
             display: flex;
@@ -596,7 +596,7 @@
             gap: 0.8rem;
             justify-content: center;
         }
-        
+
         .risk-icon {
             width: 36px;
             height: 36px;
@@ -606,28 +606,28 @@
             justify-content: center;
             font-size: 1.1rem;
         }
-        
+
         .risk-conservative .risk-icon {
             background: rgba(59, 130, 246, 0.2);
             color: #60a5fa;
         }
-        
+
         .risk-standard .risk-icon {
             background: rgba(34, 197, 94, 0.2);
             color: #4ade80;
         }
-        
+
         .risk-aggressive .risk-icon {
             background: rgba(249, 115, 22, 0.2);
             color: #fb923c;
         }
-        
+
         .lot-size {
             font-size: 1.15rem;
             font-weight: 600;
             color: var(--accent);
         }
-        
+
         .risk-warning {
             text-align: center;
             color: var(--accent);
@@ -638,14 +638,14 @@
             justify-content: center;
             gap: 0.5rem;
         }
-        
+
         /* CTA Section */
         .cta {
             text-align: center;
             padding: 120px 5%;
             position: relative;
         }
-        
+
         .cta::before {
             content: '';
             position: absolute;
@@ -657,13 +657,13 @@
             background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
             pointer-events: none;
         }
-        
+
         /* FAQ Section */
         .faq-section {
             padding: 100px 5%;
             background: var(--glass);
         }
-        
+
         .faq-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -672,7 +672,7 @@
             margin: 0 auto;
             margin-top: 3rem;
         }
-        
+
         .faq-item {
             background: var(--glass);
             border: 1px solid var(--glass-border);
@@ -680,30 +680,30 @@
             padding: 2rem;
             transition: all 0.3s ease;
         }
-        
+
         .faq-item:hover {
             border-color: var(--accent);
             transform: translateY(-5px);
         }
-        
+
         .faq-item h3 {
             color: var(--accent);
             font-size: 1.1rem;
             margin-bottom: 1rem;
         }
-        
+
         .faq-item p {
             color: var(--text-gray);
             font-size: 0.95rem;
             line-height: 1.8;
         }
-        
+
         /* Social Section */
         .social-section {
             padding: 80px 5%;
             text-align: center;
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -711,7 +711,7 @@
             margin-top: 2rem;
             flex-wrap: wrap;
         }
-        
+
         .social-link {
             display: flex;
             align-items: center;
@@ -725,38 +725,38 @@
             transition: all 0.3s ease;
             font-size: 1rem;
         }
-        
+
         .social-link:hover {
             border-color: var(--accent);
             transform: translateY(-3px);
             box-shadow: 0 10px 30px var(--accent-glow);
         }
-        
+
         .social-link.telegram:hover {
             border-color: #0088cc;
         }
-        
+
         .social-link.line:hover {
             border-color: #06c755;
         }
-        
+
         .social-link.github:hover {
             border-color: #333;
         }
-        
+
         .cta h2 {
             font-size: clamp(2rem, 5vw, 3rem);
             margin-bottom: 1.5rem;
             position: relative;
         }
-        
+
         .cta p {
             color: var(--text-gray);
             margin-bottom: 2.5rem;
             font-size: 1.15rem;
             position: relative;
         }
-        
+
         /* Footer */
         footer {
             padding: 3rem 5%;
@@ -764,7 +764,7 @@
             border-top: 1px solid var(--glass-border);
             background: rgba(10, 22, 40, 0.5);
         }
-        
+
         .footer-logo {
             font-size: 1.3rem;
             font-weight: 700;
@@ -775,12 +775,12 @@
             background-clip: text;
             margin-bottom: 1rem;
         }
-        
+
         footer p {
             color: var(--text-gray);
             font-size: 0.9rem;
         }
-        
+
         /* Mobile Menu */
         .mobile-toggle {
             display: none;
@@ -788,44 +788,108 @@
             gap: 5px;
             cursor: pointer;
             padding: 10px;
+            z-index: 1001;
         }
-        
+
         .mobile-toggle span {
             width: 25px;
             height: 2px;
             background: var(--text-light);
             transition: all 0.3s;
         }
-        
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 22, 40, 0.98);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--accent);
+        }
+
         /* Responsive */
         @media (max-width: 900px) {
             .nav-links {
                 display: none;
             }
-            
+
             .mobile-toggle {
                 display: flex;
             }
-            
+
+            .hero {
+                padding: 100px 5% 60px;
+                min-height: auto;
+                min-height: 100vh;
+            }
+
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
-            
+
             .hero-subtitle {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
-            
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
             .risk-header,
             .risk-row {
                 grid-template-columns: 1fr;
                 gap: 0.5rem;
             }
-            
+
             .risk-header span:not(:first-child),
             .risk-row > div:not(:first-child) {
                 display: none;
             }
-            
+
             .risk-group {
                 justify-content: flex-start;
             }
@@ -841,7 +905,7 @@
         <div class="particle"></div>
         <div class="particle"></div>
     </div>
-    
+
     <nav id="navbar">
         <div class="logo">
             <img src="logo.jpg" alt="3M Capital">
@@ -861,7 +925,17 @@
             <span></span>
         </div>
     </nav>
-    
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#strategy" class="mobile-link">關於我們</a>
+        <a href="#services" class="mobile-link">3M會員</a>
+        <a href="#team" class="mobile-link">託管方案</a>
+        <a href="#risk" class="mobile-link">每日收益</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="#contact" class="mobile-link">聯絡客服</a>
+    </div>
+
     <section class="hero">
         <div class="hero-content">
             <span class="hero-badge">QUANTITATIVE INVESTMENT EXPERTS</span>
@@ -876,17 +950,17 @@
             </div>
         </div>
     </section>
-    
+
     <section class="strategy" id="strategy">
         <div class="section-header">
             <span class="section-label">ABOUT US</span>
             <h2 class="section-title">關於我們</h2>
         </div>
-        
+
         <div class="strategy-image">
             <img src="S__5464068.jpg" alt="3M 策略工廠系統">
         </div>
-        
+
         <div class="strategy-grid">
             <div class="strategy-card">
                 <span class="strategy-number">01</span>
@@ -894,21 +968,21 @@
                 <h3>研究假設</h3>
                 <p>透過深入的市場研究與數據分析，建立投資假設並驗證其可行性</p>
             </div>
-            
+
             <div class="strategy-card">
                 <span class="strategy-number">02</span>
                 <div class="strategy-icon">📊</div>
                 <h3>建模回測</h3>
                 <p>運用先進的量化模型進行歷史回測，驗證策略穩定性</p>
             </div>
-            
+
             <div class="strategy-card">
                 <span class="strategy-number">03</span>
                 <div class="strategy-icon">🚀</div>
                 <h3>部署監控</h3>
                 <p>自動化執行交易策略，實時監控市場動向</p>
             </div>
-            
+
             <div class="strategy-card">
                 <span class="strategy-number">04</span>
                 <div class="strategy-icon">♻️</div>
@@ -917,32 +991,32 @@
             </div>
         </div>
     </section>
-    
+
     <section class="services" id="services">
         <div class="section-header">
             <span class="section-label">MEMBER GROUP</span>
             <h2 class="section-title">3M會員群組（月費制/分潤制）</h2>
         </div>
-        
+
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">🛡️</div>
                 <h3>全程化風控</h3>
                 <p>風險量化管理，嚴格止損機制<br>全方位保障投資資金安全</p>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-icon">📈</div>
                 <h3>跟單交易</h3>
                 <p>專業團隊操盤，會員同步跟單<br>共享優質投資成果</p>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-icon">💰</div>
                 <h3>倉位配置</h3>
                 <p>根據風險承受能力<br>提供個性化倉位配置方案</p>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-icon">⚡</div>
                 <h3>即時交易</h3>
@@ -950,36 +1024,36 @@
             </div>
         </div>
     </section>
-    
+
     <section class="team" id="team">
         <div class="section-header">
             <span class="section-label">托管方案</span>
             <h2 class="section-title">3M託管方案</h2>
         </div>
-        
+
         <div class="team-image">
             <img src="messageImage_1772682890881(1).jpg" alt="3M Capital Team">
         </div>
     </section>
-    
+
     <section class="risk-section" id="risk">
         <div class="section-header">
             <span class="section-label">DAILY RETURNS</span>
             <h2 class="section-title">追蹤每日收益（IG:3m_capital, 二維碼）</h2>
             <p style="color: var(--text-gray); margin-top: 1rem;">※ 按每萬美元帳戶淨值計算</p>
         </div>
-        
+
         <div class="risk-image">
             <img src="S__5464069.jpg" alt="倉位配置">
         </div>
-        
+
         <div class="risk-table">
             <div class="risk-header">
                 <span>組別</span>
                 <span>黃金 (XAUUSD)</span>
                 <span>外匯</span>
             </div>
-            
+
             <div class="risk-row risk-conservative">
                 <div class="risk-group">
                     <div class="risk-icon">🛡️</div>
@@ -988,7 +1062,7 @@
                 <div class="lot-size">0.5 手</div>
                 <div class="lot-size">1 手</div>
             </div>
-            
+
             <div class="risk-row risk-standard">
                 <div class="risk-group">
                     <div class="risk-icon">📊</div>
@@ -997,7 +1071,7 @@
                 <div class="lot-size">1 手</div>
                 <div class="lot-size">2 手</div>
             </div>
-            
+
             <div class="risk-row risk-aggressive">
                 <div class="risk-group">
                     <div class="risk-icon">🚀</div>
@@ -1007,51 +1081,51 @@
                 <div class="lot-size">4 手</div>
             </div>
         </div>
-        
+
         <p class="risk-warning">
             ⚠️ 請務必根據自身風險承受能力，謹慎選擇適合的組別
         </p>
     </section>
-    
+
     <section class="faq-section" id="faq">
         <div class="section-header">
             <span class="section-label">FAQ</span>
             <h2 class="section-title">常見問題</h2>
         </div>
-        
+
         <div class="faq-grid">
             <div class="faq-item">
                 <h3>❓ 你們是什麼機構？</h3>
                 <p>3M Capital 是一家專業的量化投資機構，專注於黃金和外匯市場的算法交易。我們擁有多年經驗的專業交易團隊，為投資者提供穩定的投資回報。</p>
             </div>
-            
+
             <div class="faq-item">
                 <h3>💰 最低投資額是多少？</h3>
                 <p>我們建議每1萬美元帳戶下單0.5手起。具體倉位可根據您的風險承受能力進行調整。</p>
             </div>
-            
+
             <div class="faq-item">
                 <h3>📊 服務費用如何？</h3>
                 <p>3個月$388 USDT，6個月$688 USDT，12個月$998 USDT。費用包含每日策略、信號指導及專業客服。</p>
             </div>
-            
+
             <div class="faq-item">
                 <h3>🔒 資金安全嗎？</h3>
                 <p>我們採用全程化風控系統，嚴格止損機制，保護投資者資金安全。所有交易公開透明，會員可即時查看。</p>
             </div>
-            
+
             <div class="faq-item">
                 <h3>📱 如何開始？</h3>
                 <p>只需聯繫客服，選擇適合您的會員套餐，完成付款後即可加入會員群組，開始接收每日交易策略。</p>
             </div>
-            
+
             <div class="faq-item">
                 <h3>⏰ 交易時間？</h3>
                 <p>我們每日發佈策略：早盤10:00、實時16:00、午盤17:00。覆蓋全球主要市場交易時段。</p>
             </div>
         </div>
     </section>
-    
+
     <section class="social-section">
         <div class="section-header">
             <h2 class="section-title">關注我們</h2>
@@ -1068,19 +1142,36 @@
             </a>
         </div>
     </section>
-    
+
     <section class="cta" id="contact">
         <h2>聯絡客服💁‍♂️</h2>
         <p>與3M Capital專業團隊一起，探索資本增長的無限可能</p>
         <a href="#" class="btn btn-primary">聯繫我們</a>
     </section>
-    
+
     <footer>
         <div class="footer-logo">3M CAPITAL</div>
         <p>© 2026 3M Capital. All rights reserved.</p>
     </footer>
-    
+
     <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileToggle.addEventListener('click', function() {
+            mobileToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const nav = document.getElementById('navbar');
@@ -1090,7 +1181,7 @@
                 nav.classList.remove('scrolled');
             }
         });
-        
+
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
