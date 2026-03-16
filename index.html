@@ -694,6 +694,142 @@
             font-weight: 500;
         }
 
+        /* Profit Sharing Section */
+        .profit-sharing {
+            padding: 6rem 5%;
+            background: linear-gradient(180deg, transparent 0%, rgba(15, 34, 64, 0.3) 50%, transparent 100%);
+        }
+
+        .ps-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .ps-highlight, .ps-schedule, .ps-risk, .ps-diversity, .ps-flexibility {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+        }
+
+        .ps-highlight h3, .ps-schedule h3, .ps-risk h3, .ps-groups h3, .ps-diversity h3, .ps-flexibility h3, .ps-flow h3 {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .ps-highlight p, .ps-risk p, .ps-diversity p, .ps-flexibility p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .ps-schedule {
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .ps-groups {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .groups-note {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .groups-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .group-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            min-width: 140px;
+            transition: all 0.3s;
+        }
+
+        .group-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .group-card.featured {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(15, 34, 64, 0.8) 100%);
+            border-color: var(--accent);
+        }
+
+        .group-icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .group-name {
+            display: block;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .group-lots {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .ps-flow {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .flow-steps {
+            list-style: none;
+            text-align: left;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .flow-steps li {
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--glass);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            font-weight: 700;
+            margin-right: 0.8rem;
+        }
+
+        .flow-link {
+            color: var(--accent);
+            word-break: break-all;
+        }
+
+        .flow-link:hover {
+            text-decoration: underline;
+        }
+
         /* Team Section */
         .team {
             background: linear-gradient(180deg, rgba(15, 34, 64, 0.5) 0%, transparent 100%);
@@ -1099,6 +1235,7 @@
             <li><a href="#strategy">關於我們</a></li>
             <li><a href="#services">3M會員</a></li>
             <li><a href="#pricing">月費方案</a></li>
+            <li><a href="#profitsharing">分潤制</a></li>
             <li><a href="#team">託管方案</a></li>
             <li><a href="#risk">每日收益</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -1115,6 +1252,8 @@
     <div class="mobile-menu">
         <a href="#strategy" class="mobile-link">關於我們</a>
         <a href="#services" class="mobile-link">3M會員</a>
+        <a href="#pricing" class="mobile-link">月費方案</a>
+        <a href="#profitsharing" class="mobile-link">分潤制</a>
         <a href="#team" class="mobile-link">託管方案</a>
         <a href="#risk" class="mobile-link">每日收益</a>
         <a href="#faq" class="mobile-link">FAQ</a>
@@ -1274,6 +1413,86 @@
                     <li>➔ 互動教學 + 專屬客服</li>
                 </ul>
                 <p class="cta-text">👆 選擇適合你的入群方式，加入群組，接收每日最新資訊及交易策略，助你的帳戶起飛 🚀</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分潤制會員方案 -->
+    <section class="profit-sharing" id="profitsharing">
+        <div class="section-header">
+            <span class="section-label">PROFIT SHARING</span>
+            <h2 class="section-title">3M會員自動跟單·分潤制</h2>
+        </div>
+
+        <div class="ps-content">
+            <div class="ps-highlight">
+                <h3>💰 穩定的收益表現</h3>
+                <p>由一班具10年以上實戰經驗的老師團隊負責策略，過去32個月僅3個月虧損。</p>
+            </div>
+
+            <div class="ps-schedule">
+                <h3>🎯 每日策略發佈時間</h3>
+                <div class="time-grid">
+                    <div class="time-item">
+                        <span class="time-label">早盤</span>
+                        <span class="time-value">10:00</span>
+                    </div>
+                    <div class="time-item">
+                        <span class="time-label">實時</span>
+                        <span class="time-value">16:00</span>
+                    </div>
+                    <div class="time-item">
+                        <span class="time-label">午盤</span>
+                        <span class="time-value">17:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ps-risk">
+                <h3>🔰 風險的可控性</h3>
+                <p>每單都帶有止盈止損，盈虧比約2:1。</p>
+            </div>
+
+            <div class="ps-groups">
+                <h3>⚖️ 跟單組別選擇</h3>
+                <p class="groups-note">每10000美元淨值下單手數：</p>
+                <div class="groups-grid">
+                    <div class="group-card">
+                        <span class="group-icon">🛡️</span>
+                        <span class="group-name">保守組</span>
+                        <span class="group-lots">0.5手</span>
+                    </div>
+                    <div class="group-card">
+                        <span class="group-icon">📊</span>
+                        <span class="group-name">標準組</span>
+                        <span class="group-lots">1手</span>
+                    </div>
+                    <div class="group-card featured">
+                        <span class="group-icon">🚀</span>
+                        <span class="group-name">進取組</span>
+                        <span class="group-lots">2手</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ps-diversity">
+                <h3>📈 策略多樣性</h3>
+                <p>多元化產品：黃金，外匯，美股等市場，捕捉更多有利可圖的機會！</p>
+            </div>
+
+            <div class="ps-flexibility">
+                <h3>♻️ 資金靈活運用</h3>
+                <p>客戶隨時可以加碼或取消綁定出金。</p>
+            </div>
+
+            <div class="ps-flow">
+                <h3>託管自動跟單流程：</h3>
+                <ol class="flow-steps">
+                    <li><span class="step-num">1</span> 經專屬鏈接開戶入金<br><a href="https://portal.tmgm.com/register?node=MTE1NDU1&language=zh-Hant" target="_blank" class="flow-link">https://portal.tmgm.com/register?node=MTE1NDU1&language=zh-Hant</a></li>
+                    <li><span class="step-num">2</span> 入金成功後，收到邀請加入自動跟單，確認後會開出9開頭的跟單子帳號，再內轉資金到此子帳號。</li>
+                    <li><span class="step-num">3</span> 跟單綁定成功，與主帳戶同步運作。<strong>無需提供交易帳密！</strong></li>
+                    <li><span class="step-num">4</span> 每月1號會經官方自動扣除20%盈利部分。</li>
+                </ol>
             </div>
         </div>
     </section>
