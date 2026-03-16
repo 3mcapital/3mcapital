@@ -510,6 +510,190 @@
             font-size: 0.9rem;
         }
 
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 6rem 5%;
+            background: linear-gradient(180deg, transparent 0%, rgba(15, 34, 64, 0.3) 50%, transparent 100%);
+        }
+
+        .pricing-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .signal-times {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .signal-times h3 {
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .time-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .time-item {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .time-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .time-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .lot-size {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .pricing-plans {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-plans h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .plans-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 1.5rem 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            min-width: 160px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .plan-card.featured {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(15, 34, 64, 0.8) 100%);
+            border-color: var(--accent);
+        }
+
+        .plan-period {
+            display: block;
+            font-size: 1rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        .payment-method {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .benefits {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .benefits h3 {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .social-platforms {
+            text-align: center;
+        }
+
+        .social-platforms h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .platforms {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .platform-icon {
+            color: var(--accent);
+        }
+
+        .platform-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .platform-features li {
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
         /* Team Section */
         .team {
             background: linear-gradient(180deg, rgba(15, 34, 64, 0.5) 0%, transparent 100%);
@@ -914,6 +1098,7 @@
         <ul class="nav-links">
             <li><a href="#strategy">關於我們</a></li>
             <li><a href="#services">3M會員</a></li>
+            <li><a href="#pricing">月費方案</a></li>
             <li><a href="#team">託管方案</a></li>
             <li><a href="#risk">每日收益</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -1017,6 +1202,78 @@
                 <div class="service-icon">⚡</div>
                 <h3>即時交易</h3>
                 <p>每日多個交易時段<br>緊密追蹤市場機會</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 月費制會員方案 -->
+    <section class="pricing-section" id="pricing">
+        <div class="section-header">
+            <span class="section-label">SUBSCRIPTION PLANS</span>
+            <h2 class="section-title">🚀 3M會員自主下單・月費制 🚀</h2>
+        </div>
+
+        <div class="pricing-content">
+            <div class="signal-times">
+                <h3>🎯 每日策略發佈時間</h3>
+                <div class="time-grid">
+                    <div class="time-item">
+                        <span class="time-label">早盤</span>
+                        <span class="time-value">10:00</span>
+                    </div>
+                    <div class="time-item">
+                        <span class="time-label">實時</span>
+                        <span class="time-value">16:00</span>
+                    </div>
+                    <div class="time-item">
+                        <span class="time-label">午盤</span>
+                        <span class="time-value">17:00</span>
+                    </div>
+                </div>
+                <p class="lot-size">📌 建議手數：每1萬美元帳號下單0.5手</p>
+            </div>
+
+            <div class="pricing-plans">
+                <h3>✨ 靈活月費制 - 套餐選擇</h3>
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <span class="plan-period">3個月</span>
+                        <span class="plan-price">$388 USDT</span>
+                    </div>
+                    <div class="plan-card">
+                        <span class="plan-period">6個月</span>
+                        <span class="plan-price">$688 USDT</span>
+                    </div>
+                    <div class="plan-card featured">
+                        <span class="plan-period">12個月</span>
+                        <span class="plan-price">$998 USDT</span>
+                        <span class="plan-badge">最優惠</span>
+                    </div>
+                </div>
+                <p class="payment-method">🤝 付款方式：轉數快 或 USDT</p>
+            </div>
+
+            <div class="benefits">
+                <h3>💡 小資金也能跟上操作，收益輕鬆覆蓋成本！</h3>
+            </div>
+
+            <div class="social-platforms">
+                <h3>📢 官方發佈平台</h3>
+                <div class="platforms">
+                    <div class="platform">
+                        <span class="platform-icon">🔹</span>
+                        <span>Telegram 群組</span>
+                    </div>
+                    <div class="platform">
+                        <span class="platform-icon">🔹</span>
+                        <span>Line 社群</span>
+                    </div>
+                </div>
+                <ul class="platform-features">
+                    <li>➔ 即時訊號 + 策略解析</li>
+                    <li>➔ 互動教學 + 專屬客服</li>
+                </ul>
+                <p class="cta-text">👆 選擇適合你的入群方式，加入群組，接收每日最新資訊及交易策略，助你的帳戶起飛 🚀</p>
             </div>
         </div>
     </section>
