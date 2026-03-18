@@ -1214,6 +1214,14 @@
 
         /* Responsive */
         @media (max-width: 900px) {
+            * {
+                max-width: 100vw;
+            }
+            
+            html, body {
+                overflow-x: hidden;
+            }
+            
             .nav-links {
                 display: none;
             }
@@ -1248,6 +1256,8 @@
 
             section {
                 padding: 60px 5%;
+                max-width: 100vw;
+                overflow-x: hidden;
             }
 
             .risk-header,
@@ -1263,6 +1273,16 @@
 
             .risk-group {
                 justify-content: flex-start;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .container, .strategy-content, .services-grid, .pricing-cards, .profit-grid, .team-grid, .faq-list, .contact-container {
+                max-width: 100%;
+                padding: 0;
             }
         }
     </style>
