@@ -221,20 +221,13 @@
             font-weight: 700;
             margin-bottom: 1.5rem;
             line-height: 1.15;
-            animation: fadeInUp 0.8s ease 0.2s both;
         }
 
         .hero h1 .highlight {
-            background: linear-gradient(135deg, var(--accent) 0%, #f5d97a 50%, var(--accent) 100%);
+            background: var(--accent);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            background-size: 200% auto;
-            animation: shimmer 3s linear infinite;
-        }
-
-        @keyframes shimmer {
-            to { background-position: 200% center; }
         }
 
         @keyframes fadeInUp {
@@ -249,7 +242,6 @@
             max-width: 650px;
             margin-left: auto;
             margin-right: auto;
-            animation: fadeInUp 0.8s ease 0.4s both;
         }
 
         .hero-cta {
