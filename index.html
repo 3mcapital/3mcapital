@@ -217,6 +217,19 @@
             background-clip: text;
         }
 
+        .logo-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-subtext {
+            font-size: 0.65rem;
+            color: #8b929e;
+            letter-spacing: 2px;
+            margin-top: 2px;
+        }
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
@@ -1379,7 +1392,10 @@
     <nav id="navbar">
         <div class="logo">
             <img src="logo.jpg" alt="3M Capital">
-            <span class="logo-text">3M CAPITAL</span>
+            <div class="logo-text-wrapper">
+                <span class="logo-text">3M CAPITAL</span>
+                <span class="logo-subtext">專業量化交易服務商</span>
+            </div>
         </div>
         <ul class="nav-links">
             <li><a href="#strategy">關於我們</a></li>
