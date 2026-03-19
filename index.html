@@ -95,30 +95,38 @@
         }
 
         /* Hero 横幅广告 */
-        .promo-hero {
+        .promo-hero-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .promo-hero-card {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 30px 40px;
+            gap: 16px;
+            padding: 24px 30px;
             background: linear-gradient(135deg, #1a2a3a 0%, #0d1520 100%);
             border-radius: 16px;
             border: 1px solid rgba(0, 102, 204, 0.4);
             box-shadow: 0 8px 30px rgba(0, 102, 204, 0.2);
             text-decoration: none;
             transition: all 0.3s ease;
-            max-width: 800px;
-            margin: 0 auto;
+            flex: 1;
+            min-width: 300px;
         }
 
-        .promo-hero:hover {
+        .promo-hero-card:hover {
             transform: scale(1.02);
             box-shadow: 0 12px 40px rgba(0, 102, 204, 0.3);
             border-color: rgba(0, 192, 139, 0.6);
         }
 
         .promo-hero-icon {
-            font-size: 3em;
+            font-size: 2.5em;
             flex-shrink: 0;
         }
 
@@ -131,26 +139,31 @@
         .promo-hero-title {
             color: #00c08b;
             font-weight: 700;
-            font-size: 1.4em;
+            font-size: 1.2em;
             margin-bottom: 4px;
         }
 
         .promo-hero-desc {
             color: #a0aab4;
-            font-size: 1em;
+            font-size: 0.9em;
         }
 
         @media (max-width: 600px) {
-            .promo-hero {
+            .promo-hero-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .promo-hero-card {
                 flex-direction: column;
                 padding: 20px;
                 text-align: center;
-            }
-            .promo-hero-icon {
-                font-size: 2.5em;
+                min-width: auto;
             }
             .promo-hero-text {
                 text-align: center;
+            }
+            .promo-hero-icon {
+                font-size: 2em;
             }
             .promo-hero-title {
                 font-size: 1.1em;
@@ -1398,13 +1411,22 @@
     </div>
 
     <section class="hero">
-        <a href="3mcapital-authentic.html" class="promo-hero" target="_blank">
-            <div class="promo-hero-icon">📊</div>
-            <div class="promo-hero-text">
-                <span class="promo-hero-title">3M會員群組策略戰績</span>
-                <span class="promo-hero-desc">點擊查看詳盡交易紀錄與驗證數據 →</span>
-            </div>
-        </a>
+        <div class="promo-hero-container">
+            <a href="3mcapital-authentic.html" class="promo-hero-card" target="_blank">
+                <div class="promo-hero-icon">📊</div>
+                <div class="promo-hero-text">
+                    <span class="promo-hero-title">3M會員群組策略戰績</span>
+                    <span class="promo-hero-desc">點擊查看詳盡交易紀錄與驗證數據 →</span>
+                </div>
+            </a>
+            <a href="3M金牛組託管戰績.html" class="promo-hero-card" target="_blank">
+                <div class="promo-hero-icon">🛡️</div>
+                <div class="promo-hero-text">
+                    <span class="promo-hero-title">3M金牛組託管戰績</span>
+                    <span class="promo-hero-desc">查看託管方案過往表現 →</span>
+                </div>
+            </a>
+        </div>
     </section>
 
     <section class="strategy" id="strategy">
