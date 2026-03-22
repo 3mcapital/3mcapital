@@ -1204,8 +1204,81 @@
             border-color: #06c755;
         }
 
+        .social-link.dingtalk {
+            background: #1678f3;
+            border-color: #1678f3;
+            cursor: pointer;
+        }
+
+        .social-link.dingtalk:hover {
+            border-color: #3b9cff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(22, 120, 243, 0.4);
+        }
+
         .social-link.github:hover {
             border-color: #333;
+        }
+
+        /* QR Code Modal */
+        .qr-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .qr-modal.active {
+            display: flex;
+        }
+
+        .qr-modal-content {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            animation: modalIn 0.3s ease;
+        }
+
+        @keyframes modalIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .qr-modal-content h3 {
+            color: #1678f3;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .qr-modal-content img {
+            max-width: 280px;
+            border-radius: 12px;
+            border: 2px solid #eee;
+        }
+
+        .qr-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            color: #999;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .qr-modal-close:hover {
+            color: #333;
         }
 
         .cta h2 {
@@ -1762,6 +1835,9 @@
             <a href="https://line.me/ti/p/xxu7P8DrxG" class="social-link line">
                 <span>💬</span> LINE客服-Manson
             </a>
+            <a href="#" class="social-link dingtalk" onclick="showDingTalkQR(); return false;">
+                <span>🔗</span> 釘釘客服
+            </a>
         </div>
         <a href="#" class="btn btn-primary" style="margin-top: 2rem;">聯繫我們</a>
     </section>
@@ -1770,6 +1846,16 @@
         <div class="footer-logo">3M CAPITAL</div>
         <p>© 2026 3M Capital. All rights reserved.</p>
     </footer>
+
+    <!-- DingTalk QR Modal -->
+    <div class="qr-modal" id="dingtalk-qr-modal">
+        <div class="qr-modal-content">
+            <span class="qr-modal-close" onclick="closeDingTalkQR()">&times;</span>
+            <h3>🔗 釘釘客服</h3>
+            <img src="dingtalk-Michael.jpg" alt="釘釘客服 QR Code">
+            <p style="margin-top: 15px; color: #666;">請掃描上方二維碼添加客服</p>
+        </div>
+    </div>
 
     <script>
         // Mobile menu toggle
@@ -1811,6 +1897,31 @@
                     });
                 }
             });
+        });
+
+        // DingTalk QR Modal Functions
+        function showDingTalkQR() {
+            document.getElementById('dingtalk-qr-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDingTalkQR() {
+            document.getElementById('dingtalk-qr-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('dingtalk-qr-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeDingTalkQR();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDingTalkQR();
+            }
         });
     </script>
 </body>
