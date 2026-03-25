@@ -1338,7 +1338,7 @@
         /* 浮動客服側邊欄 */
         .floating-contact {
             position: fixed;
-            right: 20px;
+            right: 5px;
             top: 50%;
             transform: translateY(-50%);
             display: flex;
@@ -1359,6 +1359,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             background: transparent;
+            margin-left: auto;
         }
 
         .fc-item.login, .fc-item.register {
@@ -1369,6 +1370,7 @@
             color: white;
             font-weight: 600;
             font-size: 0.9rem;
+            margin-left: 0;
         }
 
         .fc-item.register {
@@ -1396,8 +1398,8 @@
 
         @media (max-width: 768px) {
             .floating-contact {
-                right: 10px;
-                gap: 10px;
+                right: 5px;
+                gap: 8px;
             }
             .fc-item {
                 width: 50px;
