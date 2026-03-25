@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日業績追蹤 | 3M Capital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a1628;
+            --secondary: #f8f9fa;
+            --accent: #0066cc;
+            --accent-glow: rgba(0, 102, 204, 0.3);
+            --text-light: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-gray: #666680;
+            --glass: rgba(255, 255, 255, 0.95);
+            --glass-border: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'Space Grotesk', sans-serif;
+            background: var(--primary);
+            color: var(--text-light);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        .title {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00c08b 0%, #0066cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--text-gray);
+            font-size: 1.1em;
+        }
+
+        .video-card {
+            background: linear-gradient(135deg, #1a2a3a 0%, #0d1520 100%);
+            border-radius: 20px;
+            padding: 24px;
+            border: 1px solid rgba(0, 102, 204, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .video-date {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .video-note {
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: rgba(0, 102, 204, 0.1);
+            border-radius: 12px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .video-note p {
+            color: var(--text-gray);
+            font-size: 0.95em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer p {
+            color: var(--text-gray);
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 600px) {
+            .title {
+                font-size: 1.5em;
+            }
+            .container {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← 返回首頁</a>
+        
+        <div class="header">
+            <h1 class="title">【每日業績追蹤】</h1>
+            <p class="subtitle">即時查看 3M Capital 每日交易紀錄與績效</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="2026-03-24.mp4" type="video/mp4">
+                    您的瀏覽器不支持 video 標籤。
+                </video>
+                <span class="video-date">📅 2026-03-24</span>
+            </div>
+            <div class="video-note">
+                <p>🎯 每日策略發佈時間：早盤 11:00 | 實時 16:00 | 午盤 17:00<br>
+                📊 過往表現：過去 21 個月增長 792.13%</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>3M Capital - 專業量化交易服務商</p>
+        </div>
+    </div>
+</body>
+</html>
