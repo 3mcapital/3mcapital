@@ -247,6 +247,32 @@
             color: var(--accent);
         }
 
+        .nav-login, .nav-register {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .nav-login {
+            background: var(--accent);
+            color: white !important;
+        }
+
+        .nav-login:hover {
+            background: #0052a3;
+        }
+
+        .nav-register {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent) !important;
+        }
+
+        .nav-register:hover {
+            background: var(--accent);
+            color: white !important;
+        }
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -1544,6 +1570,8 @@
             <li><a href="#team">追蹤每日收益</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">聯絡客服</a></li>
+            <li><a href="https://3mcapital.github.io/crm/" target="_blank" class="nav-login">登入</a></li>
+            <li><a href="https://3mcapital.github.io/crm/" target="_blank" class="nav-register">註冊</a></li>
         </ul>
         <div class="mobile-toggle">
             <span></span>
