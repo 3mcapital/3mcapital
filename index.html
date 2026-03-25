@@ -94,7 +94,9 @@
             50% { transform: translateY(-100px) scale(1.5); opacity: 0.6; }
         }
 
-        /* Hero 横幅广告 */
+        /* Video Banner */ .video-banner-container { position: relative; width: 100%; max-width: 900px; margin: 0 auto 30px; border-radius: 16px; overflow: hidden; } .video-banner { width: 100%; height: auto; display: block; border-radius: 16px; } .video-overlay { position: absolute; top: 16px; left: 16px; pointer-events: none; } .video-tag { background: rgba(0, 102, 204, 0.9); color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85em; font-weight: 600; }
+
+        /* Hero橫幅廣告*/
         .promo-hero-container {
             display: flex;
             gap: 20px;
@@ -1501,6 +1503,15 @@
     </div>
 
     <section class="hero">
+        <div class="video-banner-container">
+            <video autoplay muted loop playsinline class="video-banner">
+                <source src="2026-03-24.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+                <span class="video-tag">即時交易信號</span>
+            </div>
+        </div>
+
         <div class="promo-hero-container">
             <a href="3mcapital-authentic.html" class="promo-hero-card" target="_blank">
                 <div class="promo-hero-icon">📈</div>
@@ -1926,4 +1937,5 @@
     </script>
 </body>
 </html>
+
 
