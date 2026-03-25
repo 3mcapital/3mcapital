@@ -1310,7 +1310,7 @@
         .fc-item {
             width: 60px;
             height: 60px;
-            border-radius: 50%;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1318,14 +1318,14 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             overflow: hidden;
-            background: #fff;
+            background: transparent;
         }
 
         .fc-item img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             object-fit: contain;
-            mix-blend-mode: multiply;
+            display: block;
         }
 
         .fc-item:hover {
@@ -1341,10 +1341,11 @@
             .fc-item {
                 width: 50px;
                 height: 50px;
+                border-radius: 10px;
             }
             .fc-item img {
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 50px;
             }
         }
 
