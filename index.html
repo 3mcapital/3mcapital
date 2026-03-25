@@ -1295,6 +1295,52 @@
         }
 
         /* Footer */
+        /* 浮動客服側邊欄 */
+        .floating-contact {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        .fc-item {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .fc-item.telegram { background: #0088cc; }
+        .fc-item.line { background: #06c755; }
+        .fc-item.dingtalk { background: #1677ff; }
+
+        .fc-item:hover {
+            transform: scale(1.15);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .floating-contact {
+                right: 10px;
+                gap: 8px;
+            }
+            .fc-item {
+                width: 42px;
+                height: 42px;
+                font-size: 1.2em;
+            }
+        }
+
         footer {
             padding: 3rem 5%;
             text-align: center;
@@ -1862,6 +1908,22 @@
             <img src="dingtalk-Michael.jpg" alt="釘釘客服 QR Code">
             <p style="margin-top: 15px; color: #666;">請掃描上方二維碼添加客服</p>
         </div>
+    </div>
+
+    <!-- 浮動客服側邊欄 -->
+    <div class="floating-contact">
+        <a href="https://t.me/Paul77889900" class="fc-item telegram" target="_blank" title="Telegram">
+            <span>✈️</span>
+        </a>
+        <a href="https://line.me/ti/p/NuM5I_lXus" class="fc-item line" target="_blank" title="LINE-Nick">
+            <span>💬</span>
+        </a>
+        <a href="https://line.me/ti/p/xxu7P8DrxG" class="fc-item line" target="_blank" title="LINE-Manson">
+            <span>💬</span>
+        </a>
+        <a href="#" class="fc-item dingtalk" onclick="showDingTalkQR(); return false;" title="釘釘">
+            <span>🏠</span>
+        </a>
     </div>
 
     <script>
