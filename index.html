@@ -1314,15 +1314,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4em;
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            background: #fff;
         }
 
-        .fc-item.telegram { background: #0088cc; }
-        .fc-item.line { background: #06c755; }
-        .fc-item.dingtalk { background: #1677ff; }
+        .fc-item img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
 
         .fc-item:hover {
             transform: scale(1.15);
@@ -1337,7 +1340,10 @@
             .fc-item {
                 width: 42px;
                 height: 42px;
-                font-size: 1.2em;
+            }
+            .fc-item img {
+                width: 26px;
+                height: 26px;
             }
         }
 
@@ -1913,16 +1919,16 @@
     <!-- 浮動客服側邊欄 -->
     <div class="floating-contact">
         <a href="https://t.me/Paul77889900" class="fc-item telegram" target="_blank" title="Telegram">
-            <span>✈️</span>
+            <img src="emoji-telegram2.jpg" alt="Telegram">
         </a>
         <a href="https://line.me/ti/p/NuM5I_lXus" class="fc-item line" target="_blank" title="LINE-Nick">
-            <span>💬</span>
+            <img src="LINE.jpg" alt="LINE">
         </a>
         <a href="https://line.me/ti/p/xxu7P8DrxG" class="fc-item line" target="_blank" title="LINE-Manson">
-            <span>💬</span>
+            <img src="LINE.jpg" alt="LINE">
         </a>
         <a href="#" class="fc-item dingtalk" onclick="showDingTalkQR(); return false;" title="釘釘">
-            <span>🏠</span>
+            <img src="DingDing.jpg" alt="釘釘">
         </a>
     </div>
 
