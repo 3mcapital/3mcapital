@@ -1361,6 +1361,27 @@
             background: transparent;
         }
 
+        .fc-item.login, .fc-item.register {
+            width: auto;
+            height: auto;
+            padding: 10px 16px;
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .fc-item.register {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .fc-item.login:hover, .fc-item.register:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
         .fc-item img {
             width: 60px;
             height: 60px;
@@ -1590,6 +1611,8 @@
         <a href="#risk" class="mobile-link">每日收益</a>
         <a href="#faq" class="mobile-link">FAQ</a>
         <a href="#contact" class="mobile-link">聯絡客服</a>
+        <a href="https://portal.tmgm.com/login" class="mobile-link" target="_blank">登入</a>
+        <a href="https://portal.tmgm.com/register?node=MTE1NDU1&language=zh-Hant" class="mobile-link" target="_blank">註冊</a>
     </div>
 
     <section class="hero">
@@ -1965,6 +1988,12 @@
 
     <!-- 浮動客服側邊欄 -->
     <div class="floating-contact">
+        <a href="https://portal.tmgm.com/login" class="fc-item login" target="_blank" title="登入">
+            <span>登入</span>
+        </a>
+        <a href="https://portal.tmgm.com/register?node=MTE1NDU1&language=zh-Hant" class="fc-item register" target="_blank" title="註冊">
+            <span>註冊</span>
+        </a>
         <a href="https://t.me/Paul77889900" class="fc-item telegram" target="_blank" title="Telegram">
             <img src="emoji-telegram2.jpg" alt="Telegram">
         </a>
