@@ -94,6 +94,83 @@
             50% { transform: translateY(-100px) scale(1.5); opacity: 0.6; }
         }
 
+        /* 4天盈利案例橫幅 */
+        .case-hero-container {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .case-hero-card {
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #1a2a3a 0%, #0d1520 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+            overflow: hidden;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .case-hero-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
+        }
+
+        .case-video-wrapper {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .case-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .case-text {
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .case-title {
+            color: #00c08b;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-desc {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-timeline {
+            background: rgba(0, 102, 204, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-timeline p {
+            color: #a0aab4;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .case-timeline p:last-child {
+            margin-bottom: 0;
+        }
+
+        .case-footer {
+            color: #00c08b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
         /* Hero橫幅廣告*/
         .promo-hero-container {
             display: flex;
@@ -1618,14 +1695,28 @@
     </div>
 
     <section class="hero">
-        <div class="promo-hero-container">
-            <a href="daily-performance.html" class="promo-hero-card">
-                <div class="promo-hero-icon">📊</div>
-                <div class="promo-hero-text">
-                    <span class="promo-hero-title">【每日業績追蹤】</span>
-                    <span class="promo-hero-desc">查看每日交易紀錄與績效表現 🚀</span>
+        <!-- 4天盈利案例橫幅 -->
+        <div class="case-hero-container">
+            <a href="daily-performance.html" class="case-hero-card">
+                <div class="case-video-wrapper">
+                    <video autoplay muted loop playsinline class="case-video">
+                        <source src="4天盈利 $7,225.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="case-text">
+                    <h3 class="case-title">📊 4天，$11,000 → $18,225</h3>
+                    <p class="case-desc">💰 盈利 $7,225，其中 $7,200 已安全出金到賬</p>
+                    <div class="case-timeline">
+                        <p>👉 3月20日，入金$11,000啓動</p>
+                        <p>👉 密集交易，精准捕捉每一波行情</p>
+                        <p>👉 3月26日，賬戶結餘$11,025.71，盈利已落袋</p>
+                    </div>
+                    <p class="case-footer">這是剛剛完成的一對一託管案例。</p>
                 </div>
             </a>
+        </div>
+
+        <div class="promo-hero-container">
             <a href="3mcapital-authentic.html" class="promo-hero-card" target="_blank">
                 <div class="promo-hero-icon">📈</div>
                 <div class="promo-hero-text">
