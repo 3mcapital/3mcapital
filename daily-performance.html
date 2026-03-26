@@ -138,6 +138,69 @@
             font-size: 0.85em;
         }
 
+        /* 4天盈利案例樣式 */
+        .case-hero-card {
+            background: linear-gradient(135deg, #1a2a3a 0%, #0d1520 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.3);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .case-video-wrapper {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+        }
+
+        .case-video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .case-text {
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .case-title {
+            color: #00c08b;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-desc {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-timeline {
+            background: rgba(0, 102, 204, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-timeline p {
+            color: #a0aab4;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .case-timeline p:last-child {
+            margin-bottom: 0;
+        }
+
+        .case-footer {
+            color: #00c08b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
         @media (max-width: 600px) {
             .title {
                 font-size: 1.5em;
@@ -155,6 +218,26 @@
         <div class="header">
             <h1 class="title">【每日業績追蹤】</h1>
             <p class="subtitle">即時查看 3M Capital 每日交易紀錄與績效</p>
+        </div>
+
+        <!-- 4天盈利案例 -->
+        <div class="case-hero-card">
+            <div class="case-video-wrapper">
+                <video controls autoplay muted loop>
+                    <source src="4天盈利 $7,225.mp4" type="video/mp4">
+                    您的瀏覽器不支持 video 標籤。
+                </video>
+            </div>
+            <div class="case-text">
+                <h3 class="case-title">📊 4天，$11,000 → $18,225</h3>
+                <p class="case-desc">💰 盈利 $7,225，其中 $7,200 已安全出金到賬</p>
+                <div class="case-timeline">
+                    <p>👉 3月20日，入金$11,000啓動</p>
+                    <p>👉 密集交易，精准捕捉每一波行情</p>
+                    <p>👉 3月26日，賬戶結餘$11,025.71，盈利已落袋</p>
+                </div>
+                <p class="case-footer">這是剛剛完成的一對一託管案例。</p>
+            </div>
         </div>
 
         <div class="video-card">
