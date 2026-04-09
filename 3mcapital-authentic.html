@@ -506,11 +506,11 @@
                 
                 <div class="profile-stats">
                     <div class="profile-stat">
-                        <div class="profile-stat-value positive">+$129,971</div>
+                        <div class="profile-stat-value positive">+$136,806</div>
                         <div class="profile-stat-label">總盈利</div>
                     </div>
                     <div class="profile-stat">
-                        <div class="profile-stat-value positive">+1,300%</div>
+                        <div class="profile-stat-value positive">+1,368%</div>
                         <div class="profile-stat-label">總回報</div>
                     </div>
                     <div class="profile-stat">
@@ -518,7 +518,7 @@
                         <div class="profile-stat-label">月度勝率</div>
                     </div>
                     <div class="profile-stat">
-                        <div class="profile-stat-value">34</div>
+                        <div class="profile-stat-value">35</div>
                         <div class="profile-stat-label">個月</div>
                     </div>
                 </div>
@@ -660,12 +660,12 @@
             <!-- 2026 -->
             <div class="year-section">
                 <div class="year-header">
-                    <span class="year-title">📅 2026年 (運營2個月)</span>
-                    <span class="year-total negative">-$1,696</span>
+                    <span class="year-title">📅 2026年 (運營3個月)</span>
+                    <span class="year-total positive">+$5,139</span>
                 </div>
                 <div class="year-stats">
                     <div class="year-stat">
-                        <div class="year-stat-value positive">1</div>
+                        <div class="year-stat-value positive">2</div>
                         <div class="year-stat-label">盈利月</div>
                     </div>
                     <div class="year-stat">
@@ -673,17 +673,18 @@
                         <div class="year-stat-label">虧損月</div>
                     </div>
                     <div class="year-stat">
-                        <div class="year-stat-value negative">50%</div>
+                        <div class="year-stat-value">67%</div>
                         <div class="year-stat-label">勝率</div>
                     </div>
                     <div class="year-stat">
-                        <div class="year-stat-value">正常回調</div>
+                        <div class="year-stat-value">持續盈利</div>
                         <div class="year-stat-label">評價</div>
                     </div>
                 </div>
                 <div class="mini-bars">
-                    <div class="mini-bar positive" style="height: 42%"><span class="tooltip">1月 +$4,243</span></div>
-                    <div class="mini-bar negative" style="height: 59%"><span class="tooltip">2月 -$5,939</span></div>
+                    <div class="mini-bar positive" style="height: 62%"><span class="tooltip">1月 +$4,243</span></div>
+                    <div class="mini-bar negative" style="height: 87%"><span class="tooltip">2月 -$5,939</span></div>
+                    <div class="mini-bar positive" style="height: 100%"><span class="tooltip">3月 +$6,835</span></div>
                 </div>
             </div>
             
@@ -724,10 +725,10 @@
                         </tr>
                         <tr>
                             <td>2026</td>
-                            <td>2個月</td>
-                            <td style="color: var(--negative)">-$1,696</td>
-                            <td>50%</td>
-                            <td>正常回調</td>
+                            <td>3個月</td>
+                            <td style="color: var(--positive)">+$5,139</td>
+                            <td>67%</td>
+                            <td>持續盈利</td>
                         </tr>
                     </tbody>
                 </table>
@@ -786,13 +787,13 @@
     
     <div class="footer">
         <p>⚠️ 投資有風險，過往表現不代表未來收益</p>
-        <p>資料來源：3M Capital · 更新：2026年3月</p>
+        <p>資料來源：3M Capital · 更新：2026年4月</p>
     </div>
 
     <script>
         // Data
-        const data = [7369,5688,2839,4167,-1195,3377,-1431,593,4715,2247,-130,3682,4164,5673,1994,619,4110,2886,6634,3855,2164,2822,8017,8874,5587,8325,6693,6198,9664,7249,4221,4243,-5939];
-        const labels = ['23/6','7','8','9','10','11','12','24/1','2','3','4','5','6','7','8','9','10','11','12','25/1','2','3','4','5','6','7','8','9','10','11','12','26/1','2'];
+        const data = [7369,5688,2839,4167,-1195,3377,-1431,593,4715,2247,-130,3682,4164,5673,1994,619,4110,2886,6634,3855,2164,2822,8017,8874,5587,8325,6693,6198,9664,7249,4221,4243,-5939,6835];
+        const labels = ['23/6','7','8','9','10','11','12','24/1','2','3','4','5','6','7','8','9','10','11','12','25/1','2','3','4','5','6','7','8','9','10','11','12','26/1','2','3'];
         
         let cum = 10000, cumData = [cum];
         data.forEach(v => { cum += v; cumData.push(cum); });
