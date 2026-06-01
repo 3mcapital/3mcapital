@@ -506,11 +506,11 @@
                 
                 <div class="profile-stats">
                     <div class="profile-stat">
-                        <div class="profile-stat-value positive">+$142,021</div>
+                        <div class="profile-stat-value positive">+$156,783</div>
                         <div class="profile-stat-label">總盈利</div>
                     </div>
                     <div class="profile-stat">
-                        <div class="profile-stat-value positive">+1,420%</div>
+                        <div class="profile-stat-value positive">+1,568%</div>
                         <div class="profile-stat-label">總回報</div>
                     </div>
                     <div class="profile-stat">
@@ -518,7 +518,7 @@
                         <div class="profile-stat-label">月度勝率</div>
                     </div>
                     <div class="profile-stat">
-                        <div class="profile-stat-value">36</div>
+                        <div class="profile-stat-value">37</div>
                         <div class="profile-stat-label">個月</div>
                     </div>
                 </div>
@@ -660,12 +660,12 @@
             <!-- 2026 -->
             <div class="year-section">
                 <div class="year-header">
-                    <span class="year-title">📅 2026年 (運營4個月)</span>
-                    <span class="year-total positive">+$10,354</span>
+                    <span class="year-title">📅 2026年 (運營5個月)</span>
+                    <span class="year-total positive">+$25,116</span>
                 </div>
                 <div class="year-stats">
                     <div class="year-stat">
-                        <div class="year-stat-value positive">3</div>
+                        <div class="year-stat-value positive">4</div>
                         <div class="year-stat-label">盈利月</div>
                     </div>
                     <div class="year-stat">
@@ -673,19 +673,20 @@
                         <div class="year-stat-label">虧損月</div>
                     </div>
                     <div class="year-stat">
-                        <div class="year-stat-value">75%</div>
+                        <div class="year-stat-value">80%</div>
                         <div class="year-stat-label">勝率</div>
                     </div>
                     <div class="year-stat">
-                        <div class="year-stat-value">持續盈利</div>
+                        <div class="year-stat-value positive">爆發中</div>
                         <div class="year-stat-label">評價</div>
                     </div>
                 </div>
                 <div class="mini-bars">
-                    <div class="mini-bar positive" style="height: 62%"><span class="tooltip">1月 +$4,243</span></div>
-                    <div class="mini-bar negative" style="height: 87%"><span class="tooltip">2月 -$5,939</span></div>
-                    <div class="mini-bar positive" style="height: 100%"><span class="tooltip">3月 +$6,835</span></div>
-                    <div class="mini-bar positive" style="height: 76%"><span class="tooltip">4月 +$5,215</span></div>
+                    <div class="mini-bar positive" style="height: 29%"><span class="tooltip">1月 +$4,243</span></div>
+                    <div class="mini-bar negative" style="height: 40%"><span class="tooltip">2月 -$5,939</span></div>
+                    <div class="mini-bar positive" style="height: 46%"><span class="tooltip">3月 +$6,835</span></div>
+                    <div class="mini-bar positive" style="height: 35%"><span class="tooltip">4月 +$5,215</span></div>
+                    <div class="mini-bar positive" style="height: 100%"><span class="tooltip">5月 +$14,762</span></div>
                 </div>
             </div>
             
@@ -726,10 +727,10 @@
                         </tr>
                         <tr>
                             <td>2026</td>
-                            <td>4個月</td>
-                            <td style="color: var(--positive)">+$10,354</td>
-                            <td>75%</td>
-                            <td>持續盈利</td>
+                            <td>5個月</td>
+                            <td style="color: var(--positive)">+$25,116</td>
+                            <td>80%</td>
+                            <td>爆發中</td>
                         </tr>
                     </tbody>
                 </table>
@@ -793,8 +794,8 @@
 
     <script>
         // Data
-        const data = [7369,5688,2839,4167,-1195,3377,-1431,593,4715,2247,-130,3682,4164,5673,1994,619,4110,2886,6634,3855,2164,2822,8017,8874,5587,8325,6693,6198,9664,7249,4221,4243,-5939,6835,5215];
-        const labels = ['23/6','7','8','9','10','11','12','24/1','2','3','4','5','6','7','8','9','10','11','12','25/1','2','3','4','5','6','7','8','9','10','11','12','26/1','2','3','4'];
+        const data = [7369,5688,2839,4167,-1195,3377,-1431,593,4715,2247,-130,3682,4164,5673,1994,619,4110,2886,6634,3855,2164,2822,8017,8874,5587,8325,6693,6198,9664,7249,4221,4243,-5939,6835,5215,14762];
+        const labels = ['23/6','7','8','9','10','11','12','24/1','2','3','4','5','6','7','8','9','10','11','12','25/1','2','3','4','5','6','7','8','9','10','11','12','26/1','2','3','4','5'];
         
         let cum = 10000, cumData = [cum];
         data.forEach(v => { cum += v; cumData.push(cum); });
