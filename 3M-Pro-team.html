@@ -120,27 +120,18 @@
         }
         .chart {
             display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-            gap: 4px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
             min-width: 100%;
-            height: 250px;
-            padding: 25px 10px 35px 10px;
+            height: 300px;
+            padding: 25px 20px 35px 20px;
             background: rgba(0,0,0,0.3);
             border-radius: 15px;
             border: 1px solid rgba(255,215,0,0.2);
             position: relative;
         }
-        /* 零線 */
-        .chart::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 50%;
-            height: 1px;
-            background: rgba(255,255,255,0.3);
-        }
+
         /* 年份標籤 */
         .year-label {
             position: absolute;
@@ -154,41 +145,55 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-width: 26px;
-            flex-shrink: 0;
+            flex: 1;
+            max-width: 45px;
+            height: 100%;
+            justify-content: flex-end;
             position: relative;
         }
         .bar {
-            width: 20px;
+            width: 100%;
+            max-width: 35px;
             border-radius: 3px 3px 0 0;
             transition: height 0.3s ease;
         }
         .bar.positive {
             background: linear-gradient(180deg, #00ff88, #00cc6a);
+            border-radius: 3px 3px 0 0;
+            position: absolute;
+            bottom: 50%;
         }
         .bar.negative {
             background: linear-gradient(180deg, #ff6b6b, #cc5555);
             border-radius: 0 0 3px 3px;
             position: absolute;
-            bottom: 25px;
-        }
-        .bar-label {
-            color: #b8a0d9;
-            font-size: 0.6em;
-            margin-top: 5px;
-            white-space: nowrap;
+            top: 50%;
         }
         .bar-value {
             color: #fff;
-            font-size: 0.55em;
+            font-size: 0.6em;
             position: absolute;
             white-space: nowrap;
+            text-align: center;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            width: 200%;
         }
         .bar-value.positive {
-            top: -15px;
+            bottom: calc(100% - 2px);
         }
         .bar-value.negative {
-            bottom: -15px;
+            top: calc(100% - 2px);
+        }
+        .bar-label {
+            color: #b8a0d9;
+            font-size: 0.65em;
+            margin-top: 8px;
+            white-space: nowrap;
+            text-align: center;
+            z-index: 10;
+            position: relative;
         }
         
         /* Monthly Grid */
@@ -255,30 +260,30 @@
         
         @media (max-width: 768px) {
             .stats-grid, .mechanism, .monthly-grid { grid-template-columns: 1fr; }
-            .chart { height: 200px; }
-            .bar { width: 14px; }
-            .bar-group { min-width: 16px; }
+            .chart { height: 240px; gap: 4px; padding: 25px 8px 35px 8px; }
+            .bar { max-width: 28px; }
+            .bar-group { max-width: 40px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="hero">
-            <div class="badge">💎 25個月實盤見證</div>
+            <div class="badge">💎 26個月實盤見證</div>
             <div class="logo">3MFX 菁英組</div>
             <p class="subtitle">專業託管服務 · 每日20%資金運作</p>
             
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="number">+912.27%</div>
-                    <div class="label">25個月總增長</div>
+                    <div class="number">+980.15%</div>
+                    <div class="label">26個月總增長</div>
                 </div>
                 <div class="stat-card">
-                    <div class="number">25</div>
+                    <div class="number">26</div>
                     <div class="label">個月運營</div>
                 </div>
                 <div class="stat-card">
-                    <div class="number">96%</div>
+                    <div class="number">97%</div>
                     <div class="label">正收益月份</div>
                 </div>
                 <div class="stat-card">
@@ -288,143 +293,158 @@
             </div>
         </div>
         
+        <!-- 2024年月度戰績 -->
         <div class="section">
-            <div class="section-title">📈 每月戰績曲線圖</div>
+            <div class="section-title">📈 2024年月度戰績</div>
             <div class="chart-wrapper">
                 <div class="chart">
-                    <span class="year-label" style="left: 2%;">2024年</span>
-                    <span class="year-label" style="left: 35%;">2025年</span>
-                    <span class="year-label" style="right: 2%;">2026年</span>
-                    
-                    <!-- 2024年 (6月-12月) -->
                     <div class="bar-group">
                         <span class="bar-value positive">+35.5%</span>
-                        <div class="bar positive" style="height: 46px;"></div>
+                        <div class="bar positive" style="height: 37px;"></div>
                         <div class="bar-label">6月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+35.2%</span>
-                        <div class="bar positive" style="height: 45px;"></div>
+                        <div class="bar positive" style="height: 36px;"></div>
                         <div class="bar-label">7月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+35.2%</span>
-                        <div class="bar positive" style="height: 45px;"></div>
+                        <div class="bar positive" style="height: 36px;"></div>
                         <div class="bar-label">8月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+79.2%</span>
-                        <div class="bar positive" style="height: 100px;"></div>
+                        <div class="bar positive" style="height: 80px;"></div>
                         <div class="bar-label">9月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+51.5%</span>
-                        <div class="bar positive" style="height: 65px;"></div>
+                        <div class="bar positive" style="height: 52px;"></div>
                         <div class="bar-label">10月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+96.4%</span>
-                        <div class="bar positive" style="height: 122px;"></div>
+                        <div class="bar positive" style="height: 98px;"></div>
                         <div class="bar-label">11月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+81%</span>
-                        <div class="bar positive" style="height: 102px;"></div>
+                        <div class="bar positive" style="height: 82px;"></div>
                         <div class="bar-label">12月</div>
                     </div>
-                    
-                    <!-- 2025年 (1月-12月) -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 2025年月度戰績 -->
+        <div class="section">
+            <div class="section-title">📈 2025年月度戰績</div>
+            <div class="chart-wrapper">
+                <div class="chart">
                     <div class="bar-group">
                         <span class="bar-value positive">+35%</span>
-                        <div class="bar positive" style="height: 44px;"></div>
+                        <div class="bar positive" style="height: 35px;"></div>
                         <div class="bar-label">1月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+101.4%</span>
-                        <div class="bar positive" style="height: 128px;"></div>
+                        <div class="bar positive" style="height: 102px;"></div>
                         <div class="bar-label">2月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+50.8%</span>
-                        <div class="bar positive" style="height: 64px;"></div>
+                        <div class="bar positive" style="height: 51px;"></div>
                         <div class="bar-label">3月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+58.6%</span>
-                        <div class="bar positive" style="height: 74px;"></div>
+                        <div class="bar positive" style="height: 59px;"></div>
                         <div class="bar-label">4月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+54.3%</span>
-                        <div class="bar positive" style="height: 68px;"></div>
+                        <div class="bar positive" style="height: 55px;"></div>
                         <div class="bar-label">5月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+23.4%</span>
-                        <div class="bar positive" style="height: 30px;"></div>
+                        <div class="bar positive" style="height: 24px;"></div>
                         <div class="bar-label">6月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+23.7%</span>
-                        <div class="bar positive" style="height: 30px;"></div>
+                        <div class="bar positive" style="height: 24px;"></div>
                         <div class="bar-label">7月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value negative">-4%</span>
-                        <div class="bar negative" style="height: 8px;"></div>
+                        <div class="bar negative" style="height: 6px;"></div>
                         <div class="bar-label">8月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+14.8%</span>
-                        <div class="bar positive" style="height: 19px;"></div>
+                        <div class="bar positive" style="height: 15px;"></div>
                         <div class="bar-label">9月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+0.43%</span>
-                        <div class="bar positive" style="height: 1px;"></div>
+                        <div class="bar positive" style="height: 5px;"></div>
                         <div class="bar-label">10月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+11.4%</span>
-                        <div class="bar positive" style="height: 14px;"></div>
+                        <div class="bar positive" style="height: 12px;"></div>
                         <div class="bar-label">11月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+9%</span>
-                        <div class="bar positive" style="height: 11px;"></div>
+                        <div class="bar positive" style="height: 9px;"></div>
                         <div class="bar-label">12月</div>
                     </div>
-                    
-                    <!-- 2026年 (1月-3月) -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 2026年月度戰績 -->
+        <div class="section">
+            <div class="section-title">📈 2026年月度戰績</div>
+            <div class="chart-wrapper">
+                <div class="chart">
                     <div class="bar-group">
                         <span class="bar-value positive">+50.8%</span>
-                        <div class="bar positive" style="height: 64px;"></div>
+                        <div class="bar positive" style="height: 51px;"></div>
                         <div class="bar-label">1月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value negative">-16.3%</span>
-                        <div class="bar negative" style="height: 20px;"></div>
+                        <div class="bar negative" style="height: 16px;"></div>
                         <div class="bar-label">2月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+87.9%</span>
-                        <div class="bar positive" style="height: 111px;"></div>
+                        <div class="bar positive" style="height: 89px;"></div>
                         <div class="bar-label">3月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+21.07%</span>
-                        <div class="bar positive" style="height: 27px;"></div>
+                        <div class="bar positive" style="height: 21px;"></div>
                         <div class="bar-label">4月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value positive">+29.26%</span>
-                        <div class="bar positive" style="height: 37px;"></div>
+                        <div class="bar positive" style="height: 30px;"></div>
                         <div class="bar-label">5月</div>
                     </div>
                     <div class="bar-group">
                         <span class="bar-value negative">-52.59%</span>
-                        <div class="bar negative" style="height: 66px;"></div>
+                        <div class="bar negative" style="height: 53px;"></div>
                         <div class="bar-label">6月</div>
+                    </div>
+                    <div class="bar-group">
+                        <span class="bar-value positive">+67.88%</span>
+                        <div class="bar positive" style="height: 69px;"></div>
+                        <div class="bar-label">7月</div>
                     </div>
                 </div>
             </div>
@@ -469,41 +489,11 @@
                     </tr>
                     <tr>
                         <td>✅ 2026年</td>
-                        <td>6個月</td>
-                        <td class="profit">+120.14%</td>
+                        <td>7個月</td>
+                        <td class="profit">+188.02%</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">📈 2026年月度戰績 (最新)</div>
-            <div class="monthly-grid">
-                <div class="month-card">
-                    <div class="month">6月 (2026)</div>
-                    <div class="amount negative">-52.59%</div>
-                </div>
-                <div class="month-card">
-                    <div class="month">5月 (2026)</div>
-                    <div class="amount positive">+29.26%</div>
-                </div>
-                <div class="month-card">
-                    <div class="month">4月 (2026)</div>
-                    <div class="amount positive">+21.07%</div>
-                </div>
-                <div class="month-card">
-                    <div class="month">3月 (2026)</div>
-                    <div class="amount positive">+87.9%</div>
-                </div>
-                <div class="month-card">
-                    <div class="month">2月 (2026)</div>
-                    <div class="amount negative">-16.3%</div>
-                </div>
-                <div class="month-card">
-                    <div class="month">1月 (2026)</div>
-                    <div class="amount positive">+50.8%</div>
-                </div>
-            </div>
         </div>
         
         <div class="section">
@@ -511,7 +501,7 @@
             <ul style="color: #ccc; line-height: 2; font-size: 1.05em; list-style: none;">
                 <li>🎯 <strong>服務類型：</strong>專業投資託管服務</li>
                 <li>📅 <strong>成立日期：</strong>2024年6月</li>
-                <li>⏱️ <strong>運營時長：</strong>已穩定運行超過25個月</li>
+                <li>⏱️ <strong>運營時長：</strong>已穩定運行超過26個月</li>
                 <li>💰 <strong>運作機制：</strong>每日20%資金運作</li>
                 <li>🎯 <strong>策略目標：</strong>守住底線，挑戰上限</li>
             </ul>
@@ -536,7 +526,7 @@
         
         <div class="footer">
             <p>⚠️ 過往表現不代表未來收益 | 投資有風險，入市需謹慎</p>
-            <p>資料來源：3MFX 官方數據 · 更新日期：2026年6月1日</p>
+            <p>資料來源：3MFX 官方數據</p>
         </div>
     </div>
 </body>
