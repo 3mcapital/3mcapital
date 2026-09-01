@@ -1672,9 +1672,6 @@
             <a href="https://line.me/ti/p/xxu7P8DrxG" class="social-link line">
                 <span>💬</span> LINE客服-Manson
             </a>
-            <a href="#" class="social-link dingtalk" onclick="showDingTalkQR(); return false;">
-                <span>🔗</span> 釘釘客服
-            </a>
         </div>
     </section>
 
@@ -1993,16 +1990,6 @@
         <p>© 2026 3MFX. All rights reserved.</p>
     </footer>
 
-    <!-- DingTalk QR Modal -->
-    <div class="qr-modal" id="dingtalk-qr-modal">
-        <div class="qr-modal-content">
-            <span class="qr-modal-close" onclick="closeDingTalkQR()">&times;</span>
-            <h3>🔗 釘釘客服</h3>
-            <img src="dingtalk-Michael.jpg" alt="釘釘客服 QR Code">
-            <p style="margin-top: 15px; color: #666;">請掃描上方二維碼添加客服</p>
-        </div>
-    </div>
-
     <!-- 浮動客服側邊欄 -->
     <div class="floating-contact">
         <a href="https://portal.tmgm.com/login" class="fc-item login" target="_blank" title="登入">
@@ -2019,9 +2006,6 @@
         </a>
         <a href="https://line.me/ti/p/xxu7P8DrxG" class="fc-item line" target="_blank" title="LINE-Manson">
             <img src="LINE.jpg" alt="LINE">
-        </a>
-        <a href="#" class="fc-item dingtalk" onclick="showDingTalkQR(); return false;" title="釘釘">
-            <img src="DingDing.jpg" alt="釘釘">
         </a>
     </div>
 
@@ -2067,30 +2051,6 @@
             });
         });
 
-        // DingTalk QR Modal Functions
-        function showDingTalkQR() {
-            document.getElementById('dingtalk-qr-modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeDingTalkQR() {
-            document.getElementById('dingtalk-qr-modal').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('dingtalk-qr-modal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeDingTalkQR();
-            }
-        });
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeDingTalkQR();
-            }
-        });
     </script>
 </body>
 </html>
