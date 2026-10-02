@@ -428,7 +428,7 @@
         <div class="controls">
             <div class="control-group">
                 <label>年份:</label>
-                <select id="yearInput" onchange="loadCalendar()" style="padding: 10px 15px; border-radius: 6px; border: 1px solid rgba(0, 102, 204, 0.5); background: rgba(0, 102, 204, 0.1); color: #ffffff; font-size: 1em; cursor: pointer;">
+                <select id="yearInput" onchange="initMonthSelect(); loadCalendar();" style="padding: 10px 15px; border-radius: 6px; border: 1px solid rgba(0, 102, 204, 0.5); background: rgba(0, 102, 204, 0.1); color: #ffffff; font-size: 1em; cursor: pointer;">
                     <!-- 年份選項由 JavaScript 動態生成 -->
                 </select>
             </div>
@@ -1502,33 +1502,49 @@
         }
 
         function goToToday() {
-            const today = new Date();
-            document.getElementById('yearInput').value = today.getFullYear();
-            document.getElementById('monthInput').value = today.getMonth() + 1;
+            document.getElementById('yearInput').value = LAST_DATA_YEAR;
+            initMonthSelect();
+            document.getElementById('monthInput').value = LAST_DATA_MONTH;
             loadCalendar();
         }
 
         // 初始化年份選擇器
+        const LAST_DATA_YEAR = 2026;
+        const LAST_DATA_MONTH = 8; // 8月（2026年最後數據月份）
+
         function initYearSelect() {
             const yearSelect = document.getElementById('yearInput');
-            const currentYear = new Date().getFullYear();
-            
-            for (let year = 2023; year <= 2099; year++) {
+            yearSelect.innerHTML = '';
+            for (let year = 2023; year <= LAST_DATA_YEAR; year++) {
                 const option = document.createElement('option');
                 option.value = year;
                 option.textContent = year + '年';
-                if (year === currentYear) {
+                if (year === LAST_DATA_YEAR) {
                     option.selected = true;
                 }
                 yearSelect.appendChild(option);
             }
+            // 連動更新月份選項
+            initMonthSelect();
         }
 
-        // 初始化月份選擇器
+        // 初始化月份選擇器（根據所選年份動態調整）
         function initMonthSelect() {
+            const yearSelect = document.getElementById('yearInput');
             const monthSelect = document.getElementById('monthInput');
-            const currentMonth = new Date().getMonth() + 1;
-            monthSelect.value = currentMonth;
+            const selectedYear = parseInt(yearSelect.value);
+            monthSelect.innerHTML = '';
+            const maxMonth = (selectedYear >= LAST_DATA_YEAR) ? LAST_DATA_MONTH : 12;
+            const monthNames = ['', '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
+            for (let m = 1; m <= maxMonth; m++) {
+                const option = document.createElement('option');
+                option.value = m;
+                option.textContent = monthNames[m];
+                if (selectedYear === LAST_DATA_YEAR && m === LAST_DATA_MONTH) {
+                    option.selected = true;
+                }
+                monthSelect.appendChild(option);
+            }
         }
 
         // 初始化日曆
